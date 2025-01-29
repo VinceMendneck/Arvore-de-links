@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+svg {
+    stroke: white;
+}
 body {
   background-color: #060607;
   color: #f5f6fa;

@@ -8,7 +8,7 @@
   font-family: 'Roboto', sans-serif;
 }
 body {
-  background-color: #212124;
+  background-color: #060607;
   color: #f5f6fa;
 }
 li {
@@ -39,6 +39,30 @@ li {
 @media screen and (max-width: 767px) {
   .container {
     max-width: 70%;
+  }
+  .container .project-list {
+    width: 100%;
+    max-width: 560px;
+  }
+  .container .project-list .project-item {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto 8px;
+  }
+  .container .project-list .project-item a {
+    text-decoration: none;
+    background-color: #f5f6fa;
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: all ease 0.5s;
+  }
+  .container .project-list .project-item a:hover {
+    background-color: #060607;
+    color: #f5f6fa;
+    border: 2px solid #f5f6fa;
   }
 }
 header {
@@ -97,13 +121,13 @@ header .profile-avatar {
   padding: 16px 20px;
   margin-bottom: 16px;
   text-align: center;
-  color: #212124;
+  color: #060607;
   font-weight: bold;
   border-radius: 30px;
   transition: all ease 0.5s;
 }
 .project-list .project-item a:hover {
-  background-color: #212124;
+  background-color: #060607;
   color: #f5f6fa;
   border: 2px solid #f5f6fa;
 }

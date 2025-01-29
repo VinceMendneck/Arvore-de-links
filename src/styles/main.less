@@ -39,13 +39,45 @@ li{
         flex-direction: column;
         align-items: center;
     }
+}
 
-    @media screen and (@breakpointTablet) {
+@media screen and (@breakpointTablet) {
+    .container{
         max-width: 80%;
     }
+}
 
-    @media screen and (@breakpointMobile) {
+@media screen and (@breakpointMobile) {
+    .container{
         max-width: 70%;
+
+        .project-list{
+            width: 100%;
+            max-width: 560px;
+
+            .project-item{
+                max-width: 300px; // This controls the size of the white area around the button
+                width: 100%;
+                margin: 0 auto 8px; // Small margin below each item
+
+                a{
+                    text-decoration: none;
+                    background-color: #colors[buttonColor];
+                    display: block;
+                    width: 100%; // Button takes full width of its container
+                    padding: 8px 12px; // Reduced padding for smaller buttons
+                    font-size: 14px; // Smaller text
+                    border-radius: 20px; // Reduced border-radius for smaller buttons
+                    transition: all ease .5s;
+                    
+                    &:hover{
+                        background-color: #colors[backgroundColor];
+                        color: #colors[textColor];
+                        border: 2px solid #colors[textColor];
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -81,15 +113,15 @@ header{
 
 .social-links{
     display: flex;
-    justify-content: space-between; // Keep this for spacing between items
+    justify-content: space-between; 
     max-width: 240px;
     width: 100%;
     margin: 0 auto;
-    padding: 0; // Reset padding if it was affecting spacing
+    padding: 0;
 
     li{
-        flex: 0 0 auto; // Prevent flex items from growing and maintain their natural size
-        margin: 0 16px; // Add some margin for spacing between items
+        flex: 0 0 auto; 
+        margin: 0 16px; 
         
         img{
             transition: all ease .2s;
@@ -99,23 +131,24 @@ header{
         }
     }
 }
+
 .project-list{
     margin-top: 32px;
 
     .project-item{
-        width: 150%; // Ensure each item takes full width of its parent
+        width: 150%; // Default for larger screens
 
         a{
             text-decoration: none;
             background-color: #colors[buttonColor];
             display: block;
-            width: 100%; // Make the link take the full width of its container
+            width: 100%;
             padding: 16px 20px;
             margin-bottom: 16px;
             text-align: center;
             color: #colors[btnTextColor];
             font-weight: bold;
-            border-radius:30px;
+            border-radius: 30px;
             transition: all ease .5s;
             
             &:hover{
